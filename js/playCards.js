@@ -61,6 +61,7 @@ $(document).ready(function(){
     });
     $('#orderByRank').click(doOrderByRank);
     $('#orderBySuit').click(doOrderBySuit);
+    $('#orderByRankAndSuit').click(doOrderByRankAndSuit)
 
 });
 /*
