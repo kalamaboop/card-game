@@ -4,6 +4,7 @@ $(document).ready(function(){
 
     var hand = [];
     var computerHand = [];
+    
     var showError = function(msg){
         $('#error').html(msg).show();
         setTimeout(function(){
@@ -49,21 +50,22 @@ $(document).ready(function(){
     var doDeal = function(){
         
         var c;
-        for(i = 0; i < 7; i++)
-        {
+        for(i = 0; i < 7; i++){
+        
             c = cardDeck.draw();
             if(!c){
                 showError('no more cards');
                 return;
             }
-
             hand[hand.length] = c;
+
             c = cardDeck.draw();
             if(!c){
                 showError('no more cards');
                 return;
             }
             computerHand[computerHand.length] = c;
+
             cardDeck.spread();
             showHands();
         }
@@ -77,10 +79,7 @@ $(document).ready(function(){
         cardDeck.orderBySuit();
         cardDeck.spread(); // update card table
     }
-    var doOrderByRankAndSuit = function(){
-        cardDeck.orderByRank();
-        cardDeck.orderBySuit();
-        cardDeck.spread(); //update card table
+    
     }
     $('#shuffler').click(doShuffle);
     $('#draw1').click(doDrawCard1);
