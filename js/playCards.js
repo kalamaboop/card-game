@@ -100,7 +100,7 @@ $(document).ready(function(){
     });
     $('#addCard2').click(function(){
         if(!computerHand.length){
-            showError('your hand is empty');
+            showError('Computer hand is empty');
             return;
         }
         var c = computerHand.pop();
