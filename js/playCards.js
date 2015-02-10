@@ -87,7 +87,7 @@ $(document).ready(function(){
     });
     $('#orderByRank').click(doOrderByRank);
     $('#orderBySuit').click(doOrderBySuit);
-    
+    $('#dealer').click(doDeal);
 
 });
 /*
