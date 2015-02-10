@@ -58,21 +58,15 @@ $(document).ready(function(){
                 showError('no more cards');
                 return;
             }
-
             hand[hand.length] = c;
-            c = cardDeck.draw();
-            if(!c){
-                showError('no more cards');
-                return;
-            }
             
-            computerHand[computerHand.length] = c;
-            c = cardDeck.draw();
+            
             if(!c){
                 showError('no more cards');
                 return;
             }
             computerHand[computerHand.length] = c;
+            
             cardDeck.spread();
             showHands();
         }
