@@ -70,7 +70,7 @@ $(document).ready(function(){
             cardDeck.spread();
             showHands();
         }
-    };
+    }
 
     var doOrderByRank = function(){
         cardDeck.orderByRank();
