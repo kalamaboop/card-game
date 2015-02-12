@@ -18,10 +18,17 @@ $(document).ready(function(){
         for(var i=0;i<hand.length;i++){
             el.append(hand[i].getHTML());
         }
+        
         el = $('#computerHand')
         el.html('');
         for(var i=0;i<computerHand.length;i++){
             el.append(computerHand[i].getHTML());
+        }
+        
+        el = $('#discardPile')
+        el.html('');
+        for(var i=0;i<discardPile.length;i++){
+            el.append(discardPile[i].getHTML());
         }
     }
     var doShuffle = function(){
@@ -90,7 +97,7 @@ $(document).ready(function(){
         var c = hand.pop();
         showHands();
         discardPile.addCard(c);
-        discardPile.spread();
+        showHands();
     }
     
     var doAddCard2 = function(){
@@ -101,7 +108,7 @@ $(document).ready(function(){
         var c = computerHand.pop();
         showHands();
         discardPile.addCard(c);
-        discardPile.spread();
+        showHands();
     }
     
     $('#shuffler').click(doShuffle);
