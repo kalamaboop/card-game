@@ -92,8 +92,8 @@ $(document).ready(function(){
         }
         var c = hand.pop();
         showHands();
-        cardDeck.addCard(c);
-        cardDeck.spread();
+        discardPile.addCard(c);
+        discardPile.spread();
     });
     $('#addCard2').click(function(){
         if(!computerHand.length){
@@ -102,8 +102,8 @@ $(document).ready(function(){
         }
         var c = computerHand.pop();
         showHands();
-        cardDeck.addCard(c);
-        cardDeck.spread();
+        discardPile.addCard(c);
+        discardPile.spread();
     });
     $('#orderByRank').click(doOrderByRank);
     $('#orderBySuit').click(doOrderBySuit);
