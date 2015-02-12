@@ -78,6 +78,17 @@ $(document).ready(function(){
         showHands();
     }
     
+    var doDiscardToDeck = function(){
+        if(!discardPile.length){
+            showError('Discard Pile is empty');
+            return
+        }
+        var c = discardPile.pop();
+        showHands();
+        cardDeck.addCard(c);
+        cardDeck.spread();
+    }
+    
     var doDeal = function(){
         
         var c;
@@ -116,6 +127,7 @@ $(document).ready(function(){
     $('#draw2').click(doDrawCard2);
     $('#addCard1').click(doAddCard1);
     $('#addCard2').click(doAddCard2);
+    $('#discardToDeck').click(doDiscardToDeck);
     $('#orderByRank').click(doOrderByRank);
     $('#orderBySuit').click(doOrderBySuit);
     $('#dealer').click(doDeal);
