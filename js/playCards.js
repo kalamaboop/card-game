@@ -81,7 +81,7 @@ $(document).ready(function(){
     var doDiscardToDeck = function(){
         if(!discardPile.length){
             showError('Discard Pile is empty');
-            return
+            return;
         }
         var c = discardPile.pop();
         showHands();
