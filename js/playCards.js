@@ -81,7 +81,6 @@ $(document).ready(function(){
         cardDeck.spread(); // update card table
     }
     
-    }
     $('#shuffler').click(doShuffle);
     $('#draw1').click(doDrawCard1);
     $('#draw2').click(doDrawCard2);
