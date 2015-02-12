@@ -5,7 +5,6 @@ $(document).ready(function(){
     var hand = [];
     var computerHand = [];
     var discardPile = [];
-    discardPile.spread();
     
     var showError = function(msg){
         $('#error').html(msg).show();
