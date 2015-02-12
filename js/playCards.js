@@ -83,11 +83,7 @@ $(document).ready(function(){
         cardDeck.spread(); // update card table
     }
     
-    $('#shuffler').click(doShuffle);
-    $('#draw1').click(doDrawCard1);
-    $('#draw2').click(doDrawCard2);
-    
-    $('#addCard1').click(function(){
+    var doAddCard1 = function(){
         if(!hand.length){
             showError('your hand is empty');
             return;
@@ -96,7 +92,17 @@ $(document).ready(function(){
         showHands();
         discardPile.addCard(c);
         discardPile.spread();
-    });
+    }
+    
+    var doAddCard2 = function(){
+        
+    }
+    
+    $('#shuffler').click(doShuffle);
+    $('#draw1').click(doDrawCard1);
+    $('#draw2').click(doDrawCard2);
+    
+    $('#addCard1').click(doAddCard1);
     $('#addCard2').click(function(){
         if(!computerHand.length){
             showError('Computer hand is empty');
