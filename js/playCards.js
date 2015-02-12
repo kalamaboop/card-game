@@ -4,8 +4,7 @@ $(document).ready(function(){
 
     var hand = [];
     var computerHand = [];
-    var discardPile = $("discardPile").playingCards();
-    discardPile.spread
+    var discardPile = [];
     
     var showError = function(msg){
         $('#error').html(msg).show();
@@ -95,15 +94,6 @@ $(document).ready(function(){
     }
     
     var doAddCard2 = function(){
-        
-    }
-    
-    $('#shuffler').click(doShuffle);
-    $('#draw1').click(doDrawCard1);
-    $('#draw2').click(doDrawCard2);
-    
-    $('#addCard1').click(doAddCard1);
-    $('#addCard2').click(function(){
         if(!computerHand.length){
             showError('Computer hand is empty');
             return;
@@ -112,7 +102,13 @@ $(document).ready(function(){
         showHands();
         discardPile.addCard(c);
         discardPile.spread();
-    });
+    }
+    
+    $('#shuffler').click(doShuffle);
+    $('#draw1').click(doDrawCard1);
+    $('#draw2').click(doDrawCard2);
+    $('#addCard1').click(doAddCard1);
+    $('#addCard2').click(doAddCard2);
     $('#orderByRank').click(doOrderByRank);
     $('#orderBySuit').click(doOrderBySuit);
     $('#dealer').click(doDeal);
