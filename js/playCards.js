@@ -56,6 +56,28 @@ $(document).ready(function(){
         showHands();
     };
     
+    var doAddCard1 = function(){
+        if(!hand.length){
+            showError('your hand is empty');
+            return;
+        }
+        var c = hand.pop();
+        showHands();
+        discardPile[discardPile.length] = c;
+        showHands();
+    }
+    
+    var doAddCard2 = function(){
+        if(!computerHand.length){
+            showError('Computer hand is empty');
+            return;
+        }
+        var c = computerHand.pop();
+        showHands();
+        discardPile[discardPile.length] = c;
+        showHands();
+    }
+    
     var doDeal = function(){
         
         var c;
@@ -87,28 +109,6 @@ $(document).ready(function(){
     var doOrderBySuit = function(){
         cardDeck.orderBySuit();
         cardDeck.spread(); // update card table
-    }
-    
-    var doAddCard1 = function(){
-        if(!hand.length){
-            showError('your hand is empty');
-            return;
-        }
-        var c = hand.pop();
-        showHands();
-        discardPile.addCard(c);
-        showHands();
-    }
-    
-    var doAddCard2 = function(){
-        if(!computerHand.length){
-            showError('Computer hand is empty');
-            return;
-        }
-        var c = computerHand.pop();
-        showHands();
-        discardPile.addCard(c);
-        showHands();
     }
     
     $('#shuffler').click(doShuffle);
