@@ -38,7 +38,7 @@ $(document).ready(function(){
     var doDrawCard1 = function(){
         var c = cardDeck.draw();
         if(!c){
-            showError('no more cards');
+            showError('No more cards');
             return;
         }
         hand[hand.length] = c;
@@ -48,7 +48,7 @@ $(document).ready(function(){
     var doDrawCard2 = function(){
         var c = cardDeck.draw();
         if(!c){
-            showError('no more cards');
+            showError('No more cards');
             return;
         }
         computerHand[computerHand.length] = c;
@@ -58,7 +58,7 @@ $(document).ready(function(){
     
     var doAddCard1 = function(){
         if(!hand.length){
-            showError('your hand is empty');
+            showError('Your hand is empty');
             return;
         }
         var c = hand.pop();
@@ -96,14 +96,14 @@ $(document).ready(function(){
         {
             c = cardDeck.draw();
             if(!c){
-                showError('no more cards');
+                showError('No more cards');
                 return;
             }
             hand[hand.length] = c;
             
             
             if(!c){
-                showError('no more cards');
+                showError('No more cards');
                 return;
             }
             computerHand[computerHand.length] = c;
