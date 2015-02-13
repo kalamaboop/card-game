@@ -101,7 +101,7 @@ $(document).ready(function(){
             }
             hand[hand.length] = c;
             
-            
+            c = cardDeck.draw();
             if(!c){
                 showError('No more cards');
                 return;
