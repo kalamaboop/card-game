@@ -91,10 +91,10 @@ $(document).ready(function(){
     
     var doDeal = function(){
         
-        
+        var c;
         for(i = 0; i < 7; i++)
         {
-            c = cardDeck.draw();
+            x = cardDeck.draw();
             if(!c){
                 showError('No more cards');
                 return;
