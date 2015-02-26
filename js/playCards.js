@@ -94,7 +94,7 @@ $(document).ready(function(){
         var c;
         for(i = 0; i < 7; i++)
         {
-            x = cardDeck.draw();
+            c = cardDeck.draw();
             if(!c){
                 showError('No more cards');
                 return;
