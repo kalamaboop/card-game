@@ -130,7 +130,7 @@ $(document).ready(function(){
     $('#discardToDeck').click(doDiscardToDeck);
     $('#orderByRank').click(doOrderByRank);
     $('#orderBySuit').click(doOrderBySuit);
-    $('#dealer').click(doDeal);
+    
 
 });
 /*
