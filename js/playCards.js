@@ -4,7 +4,7 @@ $(document).ready(function(){
 
     var hand = [];
     var computerHand = [];
-    var discardPile = [];
+    var discardPile = [function]
     
     var showError = function(msg){
         $('#error').html(msg).show();
