@@ -91,7 +91,7 @@ $(document).ready(function(){
     
     var doDeal = function(){
         
-        var c;
+        
         for(i = 0; i < 7; i++)
         {
             c = cardDeck.draw();
@@ -130,7 +130,7 @@ $(document).ready(function(){
     $('#discardToDeck').click(doDiscardToDeck);
     $('#orderByRank').click(doOrderByRank);
     $('#orderBySuit').click(doOrderBySuit);
-    
+    $('#dealer').click(doDeal);
 
 });
 /*
