@@ -122,6 +122,18 @@ $(document).ready(function(){
         cardDeck.spread(); // update card table
     }
     
+    var doDrawFromComp = function(){
+        if(!computerHand.length){
+            showError('Your hand is empty');
+            return;
+        }
+        var c = computerHand.pop();
+        showHands();
+        hand[hand.length] = c;
+        showHands();
+    }
+    
+    
     $('#shuffler').click(doShuffle);
     $('#draw1').click(doDrawCard1);
     $('#draw2').click(doDrawCard2);
@@ -131,6 +143,9 @@ $(document).ready(function(){
     $('#orderByRank').click(doOrderByRank);
     $('#orderBySuit').click(doOrderBySuit);
     $('#dealer').click(doDeal);
+    $('#drawFromComp').Click(doDrawFromComp);
+    $('#drawFromHand').Click(doDrawFromHand);
+    
 
 });
 /*
