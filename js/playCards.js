@@ -143,8 +143,8 @@ $(document).ready(function(){
     $('#orderByRank').click(doOrderByRank);
     $('#orderBySuit').click(doOrderBySuit);
     $('#dealer').click(doDeal);
-    $('#drawFromComp').Click(doDrawFromComp);
-    $('#drawFromHand').Click(doDrawFromHand);
+    $('#drawFromComp').click(doDrawFromComp);
+    $('#drawFromHand').click(doDrawFromHand);
     
 
 });
